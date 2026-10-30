@@ -115,7 +115,8 @@
     a {
       color: inherit;
     }
-     .step-imgs img {
+
+    .step-imgs img {
       height: 125px;
       width: auto;
       max-width: 100%;
@@ -127,13 +128,15 @@
       box-shadow: var(--shadow);
       transition: transform .15s;
     }
-.step-imgs {
+
+    .step-imgs {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-top: 10px;
     }
-.step-imgs img.tall {
+
+    .step-imgs img.tall {
       height: 250px;
     }
 
@@ -564,7 +567,7 @@
       margin-top: 10px;
     }
 
-     
+
 
     .step-imgs img:hover {
       transform: translateY(-2px);
@@ -919,6 +922,21 @@
       }
     }
   </style>
+  <style>
+    /* ---------- Imagem do Fluxo Interno ---------- */
+    .internal-flow {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      cursor: zoom-in;
+      background: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -936,6 +954,7 @@
       <div class="rail-group-label">Início</div>
       <button class="tab active" data-tab="overview"><span class="ico">🧭</span>Visão geral</button>
       <button class="tab" data-tab="contatos"><span class="ico">📇</span>Contatos</button>
+      <button class="tab" data-tab="fluxo"><span class="ico">🔀</span>Fluxo Interno</button>
       <div class="rail-group-label">Prefeitura</div>
       <button class="tab" data-tab="rede"><span class="ico">🏛️</span>Rede</button>
       <button class="tab" data-tab="ramal"><span class="ico">🔧</span>Ramal</button>
@@ -1633,10 +1652,9 @@
                 contratada e Comgás <span style="color:var(--muted);font-size:11px">· 1 VIA</span></label></li>
             <li><input id="enc-rede-5" type="checkbox" /><label for="enc-rede-5">Autorização <span
                   style="color:var(--muted);font-size:11px">· 1 VIA</span></label></li>
-                  <div class="step-imgs"><img class="tall"
-                    src="nathan/DOCUMENTAÇÃO - REDE.png"
-                    alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
-                <div class="fig-caption">Modelo de carta.</div>
+            <div class="step-imgs"><img class="tall" src="nathan/DOCUMENTAÇÃO - REDE.png"
+                alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
+            <div class="fig-caption">Modelo de carta.</div>
           </ul>
         </div>
         <div class="card">
@@ -1655,10 +1673,9 @@
                 contratada <span style="color:var(--muted);font-size:11px">· DIGITAL</span></label></li>
             <li><input id="enc-ramal-2" type="checkbox" /><label for="enc-ramal-2">Autorização <span
                   style="color:var(--muted);font-size:11px">· DIGITAL</span></label></li>
-                  <div class="step-imgs"><img class="tall"
-                    src="nathan/DOCUMENTAÇÃO - RAMAL E MANUTENÇÃO.png"
-                    alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
-                <div class="fig-caption">Modelo de carta.</div>
+            <div class="step-imgs"><img class="tall" src="nathan/DOCUMENTAÇÃO - RAMAL E MANUTENÇÃO.png"
+                alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
+            <div class="fig-caption">Modelo de carta.</div>
           </ul>
         </div>
         <div class="card">
@@ -1677,10 +1694,9 @@
                 contratada <span style="color:var(--muted);font-size:11px">· DIGITAL</span></label></li>
             <li><input id="enc-manut-2" type="checkbox" /><label for="enc-manut-2">Autorização <span
                   style="color:var(--muted);font-size:11px">· DIGITAL</span></label></li>
-                  <div class="step-imgs"><img class="tall"
-                    src="nathan/DOCUMENTAÇÃO - RAMAL E MANUTENÇÃO.png"
-                    alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
-                <div class="fig-caption">Modelo de carta.</div>
+            <div class="step-imgs"><img class="tall" src="nathan/DOCUMENTAÇÃO - RAMAL E MANUTENÇÃO.png"
+                alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
+            <div class="fig-caption">Modelo de carta.</div>
           </ul>
         </div>
         <div class="card">
@@ -1709,7 +1725,9 @@
               <div class="step-line"></div>
               <div class="step-body">
                 <h4>Conferência</h4>
-                <p>Conferir documentos obrigatórios, dados, legibilidade e assinaturas conforme a <a href="https://comgas.docnix.com.br/comgas/corporate/index.html#/login" target="_blank">IN 532</a>. Se houver
+                <p>Conferir documentos obrigatórios, dados, legibilidade e assinaturas conforme a <a
+                    href="https://comgas.docnix.com.br/comgas/corporate/index.html#/login" target="_blank">IN 532</a>.
+                  Se houver
                   pendências, devolver pelo mesmo canal e pedir correção.</p>
               </div>
             </div>
@@ -1719,12 +1737,13 @@
               <div class="step-body">
                 <h4>Protocolo</h4>
                 <p><b>Ramal, rede e manutenção:</b> envio pelo portal
-                  municipal. (https://intranet.santanadeparnaiba.sp.gov.br/IDParnaiba-PUB/login?RedirectUrl=https%3a%2f%2fintranet.santanadeparnaiba.sp.gov.br%2fSisGEP-PUB)</p>
-              <div class="step-imgs"><img class="tall"
-                    src="nathan/PROTOCOLO.png"
+                  municipal.
+                  (https://intranet.santanadeparnaiba.sp.gov.br/IDParnaiba-PUB/login?RedirectUrl=https%3a%2f%2fintranet.santanadeparnaiba.sp.gov.br%2fSisGEP-PUB)
+                </p>
+                <div class="step-imgs"><img class="tall" src="nathan/PROTOCOLO.png"
                     alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
                 <div class="fig-caption">Login - Portal Municipal Santana de Parnaíba.</div>
-                </div>
+              </div>
             </div>
             <div class="step">
               <div class="step-num">5</div>
@@ -1733,8 +1752,7 @@
                 <h4>Comunique-se</h4>
                 <p>Identificar a correção solicitada pela Prefeitura, encaminhar à contratada com prazo, validar a
                   devolutiva e responder à Prefeitura por ofício.</p>
-                  <div class="step-imgs"><img class="tall"
-                    src="nathan/COMUNIQUE-SE.png"
+                <div class="step-imgs"><img class="tall" src="nathan/COMUNIQUE-SE.png"
                     alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
                 <div class="fig-caption">Modelo de carta.</div>
               </div>
@@ -1744,11 +1762,12 @@
               <div class="step-line"></div>
               <div class="step-body">
                 <h4>Conclusão</h4>
-                <p>Após o protocolo, atualizar o status para “Processo Encerrado” na planilha de governança. Fulcrum, atualizar com todas as documentações recebidas e comprovante de protocolo. No Lecom, avançar com o comprovante de protocolo. Conferir que tudo foi registrado antes de avançar o status.</p>
-              <div class="step-imgs"><img class="tall"
-                    src="nathan/PROCESSO ENCERRADO.png"
+                <p>Após o protocolo, atualizar o status para “Processo Encerrado” na planilha de governança. No <b>Fulcrum</b>,
+                  atualizar com todas as documentações recebidas e comprovante de protocolo. No <b>Lecom</b>, avançar com o
+                  comprovante de protocolo. Conferir se tudo foi registrado antes de avançar o status.</p>
+                <div class="step-imgs"><img class="tall" src="nathan/PROCESSO ENCERRADO.png"
                     alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
-                
+
               </div>
             </div>
             <div class="step">
@@ -1757,8 +1776,7 @@
                 <h4>Arquivamento</h4>
                 <p>Arquivar os documentos e digitalizar a Carta de Requerimento assinada pela Prefeitura nos sistemas
                   internos.</p>
-                  <div class="step-imgs"><img class="tall"
-                    src="nathan/CANCELAMENTO.png"
+                <div class="step-imgs"><img class="tall" src="nathan/CANCELAMENTO.png"
                     alt="Figura 8 — Modelo de autorização do Demutran para ramais"></div>
                 <div class="fig-caption">Modelo de carta.</div>
               </div>
@@ -1823,6 +1841,18 @@
           </ul>
         </div>
       </section>
+      <!-- ================= FLUXO INTERNO ================= -->
+      <section class="page" id="page-fluxo">
+        <div class="page-head">
+          <div class="kicker">FLUXO INTERNO</div>
+          <h2>Autorização para Obras em Via Pública</h2>
+        </div>
+        <div class="card">
+          <img alt="Fluxo de Autorização para Obras em Via Pública — Fluxo interno" class="internal-flow"
+            src="nathan/Santana de Parnaíba.png">
+        </div>
+      </section>
+
       <section class="page" id="page-info">
         <div class="page-head">
           <div class="kicker">REGISTROS</div>
